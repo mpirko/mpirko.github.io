@@ -1,47 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" type="image/png" href="favicon.png"> 
-    <style>
-        /* CSS to style the navigation bar */
-        .navbar {
-          background-color: #333;
-          display: flex;
-          justify-content: space-between;
-          padding: 10px;
-        }
+/* CSS to style the navigation bar */
+body {
+    margin: 0% 20% 0% 20%;
+    box-sizing:border-box;
+}
 
-        .navbar a {
-          color: white;
-          text-decoration: none;
-          padding: 10px;
-          transition: background-color 0.3s ease;
-        }
+#menu {
+    margin: 0px;
+    padding: 0px;
+    padding: 5px 10px 5px 10px;
+    background-color: #00ffe5;
+}
 
-        .navbar a:hover {
-          background-color: #555;
-        }
-    </style>
-    <title>Melissa Pirko</title>
-</head>
-<body>
-    <div class="overlay">
-        <div id="header">
-            <h1>Melissa Pirko</h1>
-        </div>
-        <div class="navbar">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="miscellaneous.html">Miscellaneous</a>
-        </div>
-        <br>
-    </div>
-    <content>
-        <div class="overlay">
-            <h2>About Me</h2>
-            <!-- Rest of your content -->
-        </div>
-    </content>
-</body>
-</html>
+#menu a {
+    font-weight: bold;
+    color: black;
+}
+
+#menu a:visited {
+    font-weight: bold;
+    color: #3f0032;
+}
+
+#menu a:hover {
+    font-weight: bold;
+    color: darkgoldenrod;
+}

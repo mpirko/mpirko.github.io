@@ -4,75 +4,37 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" type="image/png" href="favicon.png"> 
     <title>Melissa Pirko</title>
-    <style>
-        .project-image {
-            position: relative;
-            display: inline-block;
-        }
-
-        .project-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-        }
-    </style>
 </head>
 <body>
-    <div class="overlay">
-        <div id="header">
-            <h1>Melissa Pirko</h1>
-        </div>
-        <div id="menu">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-             <a href="miscellaneous.html">Miscellaneous</a>
-        </div>
-        <br>
+    <div id="header">
+        <h1>Melissa Pirko &#127800; Projects</h1>
+        <hr>
     </div>
-    <content>
-        <div class="overlay">
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <div class="project-image">
-    <a href="https://github.com/mpirko/Heart-Disease-Autoencoder">
-        <img src="HeartDiseaseAutoencoder.png" alt="Heart Disease Autoencoder" width="300" height="200">
-        <div class="project-text">Heart Disease Autoencoder</div>
-    </a>
-</div>
-                    <ul>
-                        <li><p>This code is an implementation of an autoencoder using Keras and TensorFlow libraries. An autoencoder is an unsupervised machine learning technique used to learn a compressed representation of the input data. The model is trained to learn a compressed representation of the input data and then generate output that is as close to the input as possible. This code is applied to a heart disease dataset. </p>
-
-<p>The code reads the dataset using Pandas and preprocesses it. Then, it splits the data into train and test sets and applies normalization using the QuantileTransformer function from the Scikit-learn library. The code then builds and trains the autoencoder using Keras with hyperparameter tuning using the Keras Tuner library. The autoencoder's performance is evaluated using the mean squared error and visualizing the reconstructed data. The code plots the loss and reconstruction of the validation dataset, and lastly, the code evaluates the model on the test set.</p>
-
-<p>The implications of using autoencoders are vast. This technique can be used to detect anomalies and outliers in datasets, compress images, and generate new images. In the medical field, autoencoders can be used for disease diagnosis and treatment. However, as with any machine learning model, the data quality and the model's tuning are critical factors in the model's performance. </p> </li>
-                    </ul>
-                </li>
-               <li>
-                   <div class="project-image">
-    <a href="https://github.com/mpirko/DivvyBikeIdealPlacement">
-        <img src="DivvyBike.png" alt="Divvy Bike Ideal Placement (In Progress)" width="300" height="200">
-        <div class="project-text">Divvy Bike Ideal Placement (In Progress)</div>
-    </a>
-</div>
-                    <ul>
-                        <li><p>This project will analyze Chicago Divvy Bike ride share data from the past year to identify the most popular destinations for riders and determine where new bikes should be placed in the near future.</p>
-
-<p>The project begins with the collection of Divvy Bike ride data from the past year using SQL queries. The data is then cleaned and organized to create a Tableau dashboard, which includes visualizations of popular destinations, ride frequency, and average ride duration.</p>
-
-<p>By analyzing the data, the project identifies areas with high demand for bikes and low bike density. Based on this information, recommendations are made for where new bikes should be placed to meet rider demand and improve accessibility.</p>
-
-<p>The implications of this project are significant for the Chicago Divvy Bike ride share program. By identifying the most popular bike stations and using this information to allocate new bikes, the program can ensure that riders have access to bikes where and when they need them. This can lead to increased ridership and revenue for the program, as well as improved mobility and transportation options for residents and visitors in the Chicago area.</p>
-                </li>
-            </ul>
-        </div>
-    </content>
+    <div id="menu">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="miscellaneous.html">Miscellaneous</a>
+    </div>
+    <br>
+    <h2><a href="https://github.com/mpirko/DivvyBikeIdealPlacement">Heart Disease AutoEncoder Intepretability</a></h2>
+    <p>
+        This code is an implementation of an autoencoder using Keras and TensorFlow libraries. An autoencoder is an unsupervised machine learning technique used to learn a compressed representation of the input data. The model is trained to learn a compressed representation of the input data and then generate output that is as close to the input as possible. This code is applied to a heart disease dataset.
+    </p>
+    <p>
+        The code reads the dataset using Pandas and preprocesses it. Then, it splits the data into train and test sets and applies normalization using the QuantileTransformer function from the Scikit-learn library. The code then builds and trains the autoencoder using Keras with hyperparameter tuning using the Keras Tuner library. The autoencoder's performance is evaluated using the mean squared error and visualizing the reconstructed data. The code plots the loss and reconstruction of the validation dataset, and lastly, the code evaluates the model on the test set.
+    </p>
+    <h2><a href="https://github.com/mpirko/Heart-Disease-Autoencoder">Chicago Divvy Bike Station Analysis (In Progress)</a></h2>
+    <p>
+        This project will analyze Chicago Divvy Bike ride share data from the past year to identify the most popular destinations for riders and determine where new bikes should be placed in the near future.
+    </p>
+    <p>
+        The project begins with the collection of Divvy Bike ride data from the past year using SQL queries. The data is then cleaned and organized to create a Tableau dashboard, which includes visualizations of popular destinations, ride frequency, and average ride duration.
+    </p>
+    <p>
+        By analyzing the data, the project identifies areas with high demand for bikes and low bike density. Based on this information, recommendations are made for where new bikes should be placed to meet rider demand and improve accessibility.
+    </p>
+    <p>
+        The implications of this project are significant for the Chicago Divvy Bike ride share program. By identifying the most popular bike stations and using this information to allocate new bikes, the program can ensure that riders have access to bikes where and when they need them. This can lead to increased ridership and revenue for the program, as well as improved mobility and transportation options for residents and visitors in the Chicago area.
+    </p>
 </body>
 </html>
