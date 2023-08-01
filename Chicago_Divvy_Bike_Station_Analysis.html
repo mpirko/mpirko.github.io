@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.png"> 
+    <title>Melissa Pirko</title>
+</head>
+<body>
+    <div id="header">
+        <h1>Melissa Pirko &#127800; Projects | Chicago Divvy Bike Station Analysis</h1>
+        <hr>
+    </div>
+    <div id="menu">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="miscellaneous.html">Miscellaneous</a>
+    </div>
+
+    <h2>DivvyBikeIdealPlacement</h2>
+    <p>This repository analyzes Divvy Bike data where there would be high rides and lower bike rack density areas for recommendations for new locations of bikes and stations. I have added a link to the data I have used throughout this project.</p>
+
+    <h3>Data Analysis and Findings: Divvy Bike Station Placement</h3>
+
+    <h4>Step 1: Data Preprocessing and Filtering</h4>
+    <p>The first part of the code is responsible for reading the Divvy bike stations data and the combined bike ride data. It then filters the rides that don't start or end at Divvy bike stations and drops rows with missing or invalid coordinates. It calculates the distance of each ride's starting point from the nearest bike station using a HashMap with station coordinates and names.</p>
+    <p>Next, it combines all the filtered data into a single DataFrame and selects the required columns (start and end coordinates, nearest station name, and distance to the nearest station). The filtered data is then saved to a new file.</p>
+
+    <h4>Step 2: Binning the Data</h4>
+    <p>The second part of the code involves binning the data based on the nearest station distance. It calculates the bin intervals and fills up the bins with indices of values falling within each interval. It also defines a function to find the nearest neighbors to a specified value. The code calculates the nearest and farthest Divvy bike station distances and their corresponding stations for the top 200 stations with the highest ride counts.</p>
+    <p>We can then visualize the top 200 most used Divvy stations on the following Folium map.</p>
+    <div>
+        <iframe src="divvy_map.html" width="600" height="600" frameborder="0"></iframe>
+    </div>
+
+    <h4>Step 3: Analyzing Ride Distribution at Divvy Bike Stations</h4>
+    <p>The code creates a pie chart to visualize the distribution of rides at Divvy bike stations. It calculates the percentage of rides that only started at a station, only ended at a station, both started and ended at a station, and neither started nor ended at a station. Further analysis will focus on the 6.8% of rides that neither started nor ended at a Divvy Bike station but were rather found on a random street and left at another random location.</p>
+    <br>
+    <img src="piechart.png" width="400" height="400">
+    <br>
+
+    <h4>Step 4: Visualizing Ride Counts at Top Divvy Bike Stations</h4>
+    <p>Next, I generate a bar chart to visualize the number of rides near each top Divvy bike station. The top 200 stations with the highest ride counts are selected and plotted on the bar chart.</p>
+    <br>
+    <img src="NearbyDivvyBikes.png" width="600" height="600">
+    <br>
+
+    <p>You can visualize these stations on the map below.</p> 
+    <div>
+        <iframe src="binned_nearest_divvy_map.html" width="600" height="600" frameborder="0"></iframe>
+    </div>
+
+    <h4>Presented here are the top 5 stations.</h4>
+    <p>To optimize user experience, I would recommend expanding the bike slots at these stations, as insufficient docking space might be leading to users leaving bikes unattended. Additionally, these areas exhibit a promising potential for increased demand, considering that Divvy bikes themselves serve as effective advertising tools with their prominently displayed logo. As a result, individuals seeking swift and convenient transportation solutions may turn to Divvy Bikes.</p>
+    <br>
+    <img src="Top5DivvyStationRides.png" width="600" height="600">
+    <br>
+
+    <h4>Step 5: Identifying Farthest Divvy Bike Ride Locations</h4>
+    <p>I then identify the farthest Divvy bike ride locations and their nearest station distances. This heatmap visualizes the density of farthest ride locations and adds markers for the top 200 stations with the highest counts, with the red-orange circles representing locations with the farthest away bike rides.</p>
+    <div>
+        <iframe src="binned_farthest_divvy_map.html" width="600" height="600" frameborder="0"></iframe>
+    </div>
+
+    <p>Here are 77 prominent Divvy bike station locations nearest to faraway bike rides, with each station being the closest option for those respective journeys.</p>
+    <br>
+    <img src="FarAwayDivvyBikeRidesClosestStations.png" width="600" height="600">
+    <br>
+
+    <p>Here are the top 5 of those stations:</p>
+    <br>
+    <img src="Top5FarAwayDivvyBikeRidesWithClosestStations.png" width="600" height="600">
+    <br>
+
+    <h4>Step 6: Finding Potential Locations for New Stations</h4>
+    <p>The code uses K-means clustering to identify potential locations for new bike stations based on the farthest ride locations. It clusters the farthest locations into five groups and adds markers for these potential station locations on the heatmap. The visualization is depicted below, and you may interact with the map <a href="https://drive.google.com/drive/u/2/folders/1w776iEfUUf3QOh8_fNpGKimubyaOjSRR">here:</a></p>
+    <div>
+        <iframe src="potential_stations_divvy_map.html" width="600" height="600" frameborder="0"></iframe>
+    </div>
+
+    <h3>Conclusion:</h3>
+    <p>In this project, we have performed a comprehensive analysis of Divvy bike data to identify high-usage ride areas and areas with lower bike rack density, with the aim of recommending new bike station locations. The project's significance lies in its potential to optimize bike station placement, enhancing user convenience and promoting sustainable transportation options.</p>
+    <p>The top 5 stations identified in the analysis have demonstrated promising potential for expansion, indicating a need for additional bike slots to accommodate the rising demand.</p>
+    <p>The recommended new stations are located primarily in southwest neighborhoods of Chicago, indicating a need for better transit accessibility. With expansion efforts, it may be beneficial to also advertise the <a href="https://divvybikes.com/pricing/d4e">Divvy for Everyone program</a>, which provides a one-time Annual Membership for $5 for qualifying residents. I believe this program would help attract new customers and increase expansion, which would especially be beneficial in areas that have less Chicago Transit Authority coverage.</p>
+    <p>In conclusion, this project's findings offer valuable insights for the expansion and improvement of Divvy bike stations, catering to users' needs, reducing congestion, and contributing to a greener and more sustainable urban environment. The provided data and visualizations are accessible through the linked files and maps, allowing stakeholders to explore and make data-driven decisions for the future development of Divvy bike systems. Overall, this project was insightful for me to understand Chicago Divvy bike ridership behavior and understand where there may be a need for more bikes.</p>
+  
+    <p>You can view the code and project at this <a href="https://github.com/mpirko/DivvyBikeIdealPlacement/tree/main">link</a>.</p>
+</body>
+</html>
+
