@@ -1,7 +1,12 @@
 /* CSS to style the navigation bar */
 body {
     margin: 0vw 20vw 0vw 20vw;
-    box-sizing:border-box;
+    box-sizing: border-box;
+}
+
+#header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 #menu {
@@ -14,6 +19,7 @@ body {
 #menu a {
     font-weight: bold;
     color: black;
+    text-decoration: none;
 }
 
 #menu a:visited {
@@ -26,9 +32,41 @@ body {
     color: darkgoldenrod;
 }
 
-@media screen and (max-width: 800px) {
-    body {
-        margin: 0vw 5vw 0vw 5vw;
-        box-sizing:border-box;
-    }
-  }
+/* Dropdown menu styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    font-weight: bold;
+    color: black;
+    background-color: #00ffe5;
+    padding: 0.5vw 1vw;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
